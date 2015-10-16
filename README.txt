@@ -1,5 +1,5 @@
-UiT-mal
--------
+Starting Point for UiT Web Page / Application Template
+------------------------------------------------------
 
 You can open index.html in your browser to see what the page will look
 like.
