@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>{{ page_title }}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/start/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
+    <!--[if !IE]><!--> 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!--<![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  </head>
+
+  <body>
+
+
+    <!-- template: navbar -->
+
+    <nav class="navbar navbar-default navbar-static-top skygge">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="pull-right">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="m3ny">MENY</span>
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fa fa-bars"></i>
+            </button>
+          </div>
+
+          <div class="pull-right hidden-xs">
+            <ul>
+              <li class="active dropdown" data-animate="animated fadeInUp" style="z-index:500; list-style-type: none;">
+                <button class="navbar-toggle dropdown-toggle sokeknapp" data-toggle="dropdown" type="submit" value="Søk" name="submit-button">
+                <span class="m3ny">SØK</span>
+                <i class="fa fa-search"></i>
+                </button>
+
+                <ul class="dropdown-menu animated fadeInUp">
+                  <li id="dropdownForm">
+                    <div class="dropdown-form">
+                      <form class="navbar-form form-inline" method="get" action="https://uit.no/finn">
+                        <div class="input-group">
+                          <span class="input-group-btn">
+                          <button class="btn btn-theme-bg" type="submit" name="popup-search-button">Søk</button>
+                          </span>
+                          <input type="text" class="form-control hidden-xs" placeholder="Søk etter innhold og personer" name="q" >
+                        </div> <!--input group -->
+                      </form> <!--form -->
+                    </div> <!--.dropdown form -->
+                  </li> <!--.drop form search -->
+                </ul> <!--.drop menu -->
+              </li>
+            </ul> <!--nav search form-->
+          </div>
+
+          <div class="pull-right">
+            <button type="button" class="navbar-toggle" data-toggle="modal" 
+              data-target="#bruktModal">
+            <i class="fa fa-user"></i>
+            <span class="m3ny">{{ full_name }}</span>
+            </button>
+          </div>
+
+          <a class="brand" href="https://uit.no">
+          <span>
+          <img id="logoliten" src="images/ntWebBm.png" alt="Home" />
+          </span>
+          </a>
+          <a class="app_tittle" href="https://uit.no/om">
+          <span class="hidden-xs hidden-sm">{{ App Title }}</span>
+          </a>  
+      
+        </div> <!--.navbar header-->
+
+        <!--HTML - start:menu-->
+        <script>
+          $(function() {
+            $(".dropdown-menu .row .col-md-12 .col-md-3:nth-child(4n+1)")
+            $(".dropdown-menu .row .col-md-12 .col-md-3:nth-child(4n+1)")
+          });
+        </script>
+
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.php">Start</a></li>
+            <li><a href="hjelp.php">Hjelp</a></li>
+            <li><a href="about.php">Om</a></li>
+          </ul>
+          <div class="container visible-xs">
+            <form class="navbar-form" method="get" action="https://uit.no/finn">
+              <div class="input-group">
+                <div class="input-group-btn">
+                  <button class="btn btn-frontSok" type="submit" name="submit-button">
+                  <i class="fa fa-search"></i>
+                  </button>
+                </div>
+                <input type="text" class="form-control visible-xs" placeholder="Søk etter innhold og personer" name="p_searchstring" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="avstand"></div>
+
+
+    <!-- template: banner (optional) -->
+
+    <div class="rodBannerBG">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1>{{ app_title }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Page content goes here -->
+
+    {{ content }}
+    
+
+    <!-- template: footer -->  
+
+    <div class="hidden-xs">
+      <a class="btn btn-full navbar-fixed-bottom" role="button"
+        data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+        aria-controls="collapseExample"> <i class="fa fa-arrows-v"></i>
+      &nbsp;&nbsp; ÅPNE / LUKKE BUNNMENY - FOOTER &nbsp;&nbsp; <i
+        class="fa fa-arrows-v"></i>
+      </a>
+      <div class="collapse" id="collapseExample">
+        <div class="well2">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 margin30">
+                <div class="footer-col">
+                  <h3 class="heading">Forskning</h3>
+                  <ul>
+                    <li><a href="https://uit.no/forskning/finnforsker">Finn
+                      forsker</a>
+                    </li>
+                    <li><a href="https://uit.no/ekspertliste">Finn ekspert</a></li>
+                    <li><a href="https://uit.no/prosjekter">Finn
+                      forskningsprosjekt</a>
+                    </li>
+                    <li><a href="https://uit.no/forskning/forskningsgrupper">Finn
+                      forskningsgruppe</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="divide20"></div>
+                <div class="footer-col">
+                  <h3 class="heading">Utdanning</h3>
+                  <ul>
+                    <li><a href="https://uit.no/studietilbud">Finn studieporgram</a></li>
+                    <li><a
+                      href="https://uit.no/studietilbud/emner?ar=2015&semester=V&sted=179933">Finn
+                      emne</a>
+                    </li>
+                    <li><a href="https://uit.no/studietilbud/yrker">Finn yrke</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4 margin20">
+                <div class="footer-col">
+                  <h3 class="heading">Aktuelt</h3>
+                  <ul>
+                    <li><a href="https://uit.no/tavla">Tavla</a></li>
+                    <li><a href="https://uit.no/nyheter">Nyheter</a></li>
+                    <li><a href="http://munin.uit.no/">Nye
+                      doktograder - Munin</a>
+                    </li>
+                    <li><a href="https://uit.no/tmu">Tromsø Museum
+                      - Universitetsmuseet</a>
+                    </li>
+                    <li><a href="https://uit.no/ub">Universitetsbiblioteket</a></li>
+                    <li><a href="https://uit.no/om/offjour">Offentlig
+                      journal</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="divide20"></div>
+                <div class="footer-col">
+                  <h3 class="heading">Om UiT</h3>
+                  <ul>
+                    <li><a href="https://uit.no/om/orakelet">IT-brukerstøtte</a></li>
+                    <li><a href="https://uit.no/organisasjon">Organisasjonen</a></li>
+                    <li><a
+                      href="https://uit.no/om/art?p_document_id=133877&dim=179040">Ledelsen</a></li>
+                    <li><a
+                      href="https://uit.no/om/art?p_document_id=339795&dim=179034">Kontakt</a></li>
+                    <li><a href="https://uit.no/campusoversikt">Campusoversikt</a></li>
+                    <li><a href="https://uit.no/ledigestillinger">Ledige
+                      stillinger</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--footer col-->
+              <div class="col-md-4 margin20">
+                <div class="footer-col">
+                  <h3 class="heading">Kontakt oss</h3>
+                  <ul class="address-infoFooter list-unstyled">
+                    <li><i class="fa fa-home"></i> Besøks- og
+                      leveringsadresse:<br> UiT Norges arktiske
+                      universitet<br>Hansine Hansens veg 18,9019 Tromsø
+                    </li>
+                    <br />
+                    <li><i class="fa fa-envelope"></i> Postadresse:<br>
+                      UiT Norges arktiske universitet<br>Postboks 6050
+                      Langnes,9037 Tromsø
+                    </li>
+                    <br />
+                    <li><i class="fa fa-phone"></i> +47 77 64 40 00</li>
+                    <li><i class="fa fa-envelope"></i> <a
+                      href="mailto:postmottak@uit.no">postmottak@uit.no</a></li>
+                  </ul>
+                </div>
+                <br /> <i class="fa fa-sign-in fa-green"></i> <a
+                  href="https://uit.no/securerefresh?p_url=https://uit.no/utdanning"
+                  title="Logg inn" class="forside_logginn">Logg inn</a>
+              </div>
+              <!--footer col-->
+            </div>
+          </div>
+          <!--container?-->
+        </div>
+      </div>
+    </div>
+    <div class="visible-xs">
+      <a class="btn btn-full" role="button"
+        href="https://uit.no/securerefresh?p_url=https://uit.no/utdanning">
+      LOGG INN / LOGG UT </a>
+    </div>
+    <a href="#" class="back-to-top hidden-xs" style="display: inline;"><i
+      class="fa fa-angle-double-up fa-fw fa-1x"></i> Til toppen</a>
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main
+    content</a>
+
+  </body>
+</html>
