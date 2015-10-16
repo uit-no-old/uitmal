@@ -1,6 +1,8 @@
 Starting Point for UiT Web Page / Application Template
 ------------------------------------------------------
 
+Based on https://uit.no/utdanning and https://uit.no/tmu
+
 You can open index.html in your browser to see what the page will look
 like.
 
