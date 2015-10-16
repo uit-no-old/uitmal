@@ -1,3 +1,10 @@
+UiT-mal
+-------
+
+You can open index.html in your browser to see what the page will look
+like.
+
+
 Using the Templates
 -------------------
 
